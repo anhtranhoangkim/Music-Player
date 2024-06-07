@@ -1,4 +1,4 @@
-// bind consts with querySelector
+// bind querySelector
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
