@@ -21,9 +21,11 @@ html {
 }
 
 body {
+    width: 100%;
     background-color: #0C0C0E;
     color: var(--text-color);
     display: flex;
+    justify-content: space-between;
 }
 
 .header {
@@ -41,7 +43,9 @@ body {
 /* Aside */
 aside {
     width: 8rem;
+    height: 100%;
     background-color: #131313;
+    position: fixed;
 }
 
 .logo {
@@ -73,6 +77,8 @@ nav a {
 /* Section */
 section {
     width: 70%;
+    position: relative;
+    left: 8rem;
 }
 
 .search-menu {
@@ -115,7 +121,7 @@ section {
 }
 
 .main-content-text {
-    padding-bottom: 2.4rem;
+    padding-bottom: 1.4rem;
     line-height: 1.8rem;
     font-size: 1.8rem;
 }
@@ -129,7 +135,13 @@ section {
 
 .song {
     justify-content: space-between;
-    margin-bottom: 2rem;
+    padding: 1.2rem 0 1rem 1rem;
+    border-radius: 7px;
+}
+
+.song:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
 }
 
 .song-number {
@@ -267,10 +279,47 @@ article {
     color: #ff3c63;
 }
 
+.btn.active {
+    color: #ff3c63;
+}
+
+.btn:active {
+    color: #ff3c63;
+}
+
+.song.active {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.song-favorite.fa-solid {
+    color: #ff3c63;
+}
+
 @media (max-width: 64em) {
-    aside, section {
+    aside {
         display: none;
     }
+
+    body {
+        flex-direction: column;
+    }
+
+    /* Section */
+    section {
+        order: 1;
+        left: 0;
+        width: 85%;
+        align-self: center;
+    }
+
+    .search-menu {
+        display: none;
+    }
+
+    .main-content-text {
+        padding-top: 2rem;
+    }
+    /* Article */
     article {
         width: 100%;
     }
