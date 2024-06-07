@@ -254,7 +254,6 @@ const app = {
     loadConfig: function() {
         this.isRandom = this.configs.isRandom
         this.isRepeat = this.configs.isRepeat
-        // this.songs = this.configs.favSong
 
         if (app.isRepeat) {
             repeatBtn.classList.add('active')
