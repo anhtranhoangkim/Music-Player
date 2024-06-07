@@ -1,4 +1,4 @@
-// bind consts with querySelector
+// bind querySelector
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
@@ -254,10 +254,14 @@ const app = {
     loadConfig: function() {
         this.isRandom = this.configs.isRandom
         this.isRepeat = this.configs.isRepeat
-        // this.songs = this.configs.favSong
 
-        repeatBtn.classList.toggle('active', app.isRepeat)
-        shuffleBtn.classList.toggle('active', app.isRandom)
+        if (app.isRepeat) {
+            repeatBtn.classList.add('active')
+        }
+
+        if (app.isRandom) {
+            shuffleBtn.classList.add('active')
+        }
     },
 
     // handle nextSong event
@@ -310,7 +314,7 @@ const app = {
         this.loadCurrentSong();
     },
 
-    // handle event when starting app
+    // handle events when starting app
     start: function() {
         this.loadConfig()
         this.defineProperties()
