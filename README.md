@@ -1,2 +1,2 @@
 # Music-Player
-what tf was I doing?
+a simple music player created to practice JavaScript
